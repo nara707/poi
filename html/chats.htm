@@ -224,41 +224,46 @@
 
   </div><!-- /sidebar -->
 
-  <!-- ── RIGHT CHAT AREA ── -->
-  <div class="chat-area">
-    <div class="settings-tray">
-      <div class="friend-drawer friend-drawer--grey" style="border-radius:7px; padding:6px 10px;">
+ <!-- ── RIGHT CHAT AREA ── -->
+<div class="chat-area">
+<div class="sticker-panel" id="stickerPanel">
+    <img src="https://cdn-icons-png.flaticon.com/512/742/742751.png" class="sticker">
+    <img src="https://cdn-icons-png.flaticon.com/512/616/616408.png" class="sticker">
+    <img src="https://cdn-icons-png.flaticon.com/512/1828/1828884.png" class="sticker">
+  </div>
+  <div class="settings-tray">
+    <div class="friend-drawer friend-drawer--grey" style="border-radius:7px; padding:6px 10px;">
       <img id="chatProfileImage" class="profile-image"
-        src="https://i.pinimg.com/1200x/36/cb/9c/36cb9c162b90a3de2636a2e11684143d.jpg"
-        alt="">
-		<div class="text">
-			<h6 id="chatName">Chaesita</h6>
-			<p id="chatInfo">Layin' down the law since like before Christ...</p>
-		</div>
-        <span class="settings-tray--right">
-          <i class="material-icons" id="callBtn" title="Voice call" style="cursor:pointer;">call</i>
-          <i class="material-icons" id="videoBtn" title="Video call" style="cursor:pointer;">videocam</i>
-        </span>
+        src="https://i.pinimg.com/1200x/36/cb/9c/36cb9c162b90a3de2636a2e11684143d.jpg">
+
+      <div class="text">
+        <h6 id="chatName">Chaesita</h6>
+        <p id="chatInfo">Layin' down the law since like before Christ...</p>
       </div>
-    </div>
 
-    <div class="messages-scroll">
-      <div class="bubble-left"><div class="chat-bubble chat-bubble--left">Hello dude!</div></div>
-      <div class="bubble-right"><div class="chat-bubble chat-bubble--right">Hello dude!</div></div>
-      <div class="bubble-right"><div class="chat-bubble chat-bubble--right">Hello dude!</div></div>
-      <div class="bubble-left"><div class="chat-bubble chat-bubble--left">Hello dude!</div></div>
-      <div class="bubble-left"><div class="chat-bubble chat-bubble--left">Hello dude!</div></div>
-      <div class="bubble-left"><div class="chat-bubble chat-bubble--left">Hello dude!</div></div>
-      <div class="bubble-right"><div class="chat-bubble chat-bubble--right">Hello dude!</div></div>
-    </div>
-
-    <div class="chat-box-tray">
-      <i class="material-icons">sentiment_very_satisfied</i>
-      <input type="text" placeholder="Type your message here...">
-      <i class="material-icons">mic</i>
-      <i class="material-icons">send</i>
+      <span class="settings-tray--right">
+        <i class="material-icons" id="callBtn">call</i>
+        <i class="material-icons" id="videoBtn">videocam</i>
+      </span>
     </div>
   </div>
+
+  <div class="messages-scroll" id="chatMessages">
+    <div class="bubble-left">
+      <div class="chat-bubble chat-bubble--left">Hello dude!</div>
+    </div>
+  </div>
+
+
+
+  <!-- INPUT -->
+  <div class="chat-box-tray">
+    <i class="material-icons" id="emojiBtn">sentiment_very_satisfied</i>
+    <input type="text" id="chatInput" placeholder="Type your message here...">
+    <i class="material-icons">location_on</i>
+    <i class="material-icons" id="sendBtn">send</i>  </div>
+
+</div>
 
 </div>
 
@@ -513,5 +518,8 @@
     }
   }
 </script>
+
+<script src="../js/chats.js"></script>
+
 </body>
 </html>
