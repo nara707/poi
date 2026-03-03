@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Mi Perfil - Mundial 2026</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Iconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <!-- Tus estilos -->
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/profile.css">
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm">
+    <div class="container-fluid">
+        <a class="navbar-brand fw-bold" href="index.html">
+            Mundial 2026
+        </a>
+
+        <div class="collapse navbar-collapse">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="chat.html">Chats</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="videollamada.html">Videollamada</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="perfil.html">Mi Perfil</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- CONTENIDO -->
+<div class="container my-5">
+
+    <div class="row g-4">
+
+        <!-- CARD PERFIL -->
+        <div class="col-lg-3">
+            <div class="card profile-card shadow-lg border-0">
+
+                <div class="card-body text-center">
+                
+             <div class="profile-img-container mb-3">
+
+         <div id="profileRing" class="profile-ring ring-gold">
+         <img src="https://external-preview.redd.it/update-aespas-karina-to-sit-out-concerts-in-japan-due-to-v0-ceSmXR3RriT52PKvoeNd0UjpMmtAnO--LGFpj2RlO9o.jpg?width=640&crop=smart&auto=webp&s=d043c4e78618d0d05188ba1e97397a7b1e8d2deb"
+             class="profile-img"
+             alt="Foto perfil">
+         </div>
+
+            <div class="edit-profile-overlay"
+                data-bs-toggle="modal"
+                data-bs-target="#ringModal">
+                <i class="fas fa-pen"></i>
+                <span>Cambiar aro de perfil</span>
+            </div>
+
+    </div>
+
+                    <h4 class="fw-bold mb-1">Tilin del Mal</h4>
+                    <p class="text-muted">@tilin2026</p>
+
+                    <hr>
+
+                    <div class="d-flex justify-content-around mb-3">
+
+                        <div>
+                            <h5 class="fw-bold mb-0" id="followersCount">120</h5>
+                            <small class="text-muted">Seguidores</small>
+                        </div>
+
+                        <div>
+                            <h5 class="fw-bold mb-0" id="followingCount">85</h5>
+                            <small class="text-muted">Siguiendo</small>
+                        </div>
+
+                    </div>
+
+                    <button class="btn btn-danger w-100"
+                            data-bs-toggle="modal"
+                            data-bs-target="#editProfileModal">
+                        <i class="fas fa-user-edit me-2"></i>Editar Perfil
+                    </button>
+
+                </div>
+            </div>
+        </div>
+
+
+        <!-- INFO DETALLADA -->
+        <div class="col-lg-6">
+            <div class="card shadow-sm border-0">
+                <div class="card-body">
+
+                    <h5 class="fw-bold mb-4">Información Personal</h5>
+
+                    <div class="row mb-3">
+                        <div class="col-md-6">
+                            <p><i class="fas fa-calendar-alt me-2 text-danger"></i>
+                                Fecha de nacimiento: 05/10/1999</p>
+                        </div>
+                        <div class="col-md-6">
+                            <p><i class="fas fa-globe me-2 text-danger"></i>
+                                País: México</p>
+                        </div>
+                    </div>
+
+                    <div class="row mb-3">
+                        <div class="col-md-6">
+                            <p><i class="fas fa-envelope me-2 text-danger"></i>
+                                Correo: usuario@mundial.com</p>
+                        </div>
+                        <div class="col-md-6">
+                            <p><i class="fas fa-futbol me-2 text-danger"></i>
+                                Selección favorita: México</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- LISTA DE SEGUIDORES -->
+            <div class="card shadow-sm border-0 mt-4">
+                <div class="card-body">
+
+                    <h5 class="fw-bold mb-3">Mis Seguidores</h5>
+
+                    <div id="followersList" class="d-flex flex-wrap gap-2">
+
+                        <span class="badge bg-secondary p-2">Carlos</span>
+                        <span class="badge bg-secondary p-2">Ana</span>
+                        <span class="badge bg-secondary p-2">Luis</span>
+                        <span class="badge bg-secondary p-2">Sofía</span>
+
+                    </div>
+
+                </div>
+            </div>
+
+       
+        </div>
+        <div class="col-lg-3">
+
+        <div class="card shadow-sm border-0">
+        <div class="card-body">
+
+            <h5 class="fw-bold mb-3">
+            <i class="fas fa-list-check text-danger me-2"></i>
+            Mis Tareas
+            </h5>
+
+            <!-- Input agregar -->
+            <div class="input-group mb-3">
+            <input type="text" id="newTaskInput" class="form-control" placeholder="Nueva tarea...">
+            <button class="btn btn-danger" id="addTaskBtn">
+                <i class="fas fa-plus"></i>
+            </button>
+            </div>
+
+            <!-- Lista -->
+            <ul id="taskList" class="list-group list-group-flush"></ul>
+
+        </div>
+        </div>
+
+        </div>
+        <div class="card shadow-sm border-0 mt-4">
+    <div class="card-body">
+
+        <h5 class="fw-bold mb-4">Progreso</h5>
+
+        <div class="row g-4">
+
+            <!-- MENSAJES -->
+            <div class="col-md-4">
+                <div class="progress-card">
+                    <div class="progress-bg-text">10/100</div>
+                    <h6 class="fw-bold">Mensajes</h6>
+
+                    <div class="progress-container">
+                        <div class="progress-bar-custom" data-progress="10"></div>
+                        <img src="https://images.vexels.com/media/users/3/158409/isolated/preview/b0af06a4c1a8e7a31ce379250130d26c-pelota-de-futbol-pentagono-silueta.png" class="ball-icon">
+                    </div>
+
+                    <small class="progress-count">10/100</small>
+                </div>
+            </div>
+
+            <!-- SEGUIDORES -->
+            <div class="col-md-4">
+                <div class="progress-card">
+                    <div class="progress-bg-text">120/500</div>
+                    <h6 class="fw-bold">Seguidores</h6>
+
+                    <div class="progress-container">
+                        <div class="progress-bar-custom" data-progress="24"></div>
+                        <img src="https://images.vexels.com/media/users/3/158409/isolated/preview/b0af06a4c1a8e7a31ce379250130d26c-pelota-de-futbol-pentagono-silueta.png" class="ball-icon">
+                    </div>
+
+                    <small class="progress-count">120/500</small>
+                </div>
+            </div>
+
+            <!-- SEGUIDOS -->
+            <div class="col-md-4">
+                <div class="progress-card">
+                    <div class="progress-bg-text">85/200</div>
+                    <h6 class="fw-bold">Seguidos</h6>
+
+                    <div class="progress-container">
+                        <div class="progress-bar-custom" data-progress="42"></div>
+                        <img src="https://images.vexels.com/media/users/3/158409/isolated/preview/b0af06a4c1a8e7a31ce379250130d26c-pelota-de-futbol-pentagono-silueta.png" class="ball-icon">
+                    </div>
+
+                    <small class="progress-count">85/200</small>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+    </div>
+</div>
+
+<!-- MODAL EDITAR PERFIL -->
+<div class="modal fade" id="editProfileModal">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+
+            <div class="modal-header">
+                <h5 class="modal-title">Editar Perfil</h5>
+                <button class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+
+            <div class="modal-body">
+
+                <form id="editProfileForm">
+
+                    <div class="mb-3">
+                        <label class="form-label">Nombre</label>
+                        <input type="text" class="form-control">
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">Correo</label>
+                        <input type="email" class="form-control">
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">Seleccion Favorita</label>
+                        <input type="text" class="form-control">
+                    </div>
+
+                    <button class="btn btn-danger w-100">Guardar Cambios</button>
+
+                </form>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- MODAL AROS -->
+<div class="modal fade" id="ringModal">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+
+      <div class="modal-header">
+        <h5 class="modal-title">Seleccionar Aro</h5>
+        <button class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+
+      <div class="modal-body text-center">
+
+        <div class="ring-option ring-gold" data-ring="ring-gold"></div>
+        <div class="ring-option ring-blue" data-ring="ring-blue"></div>
+        <div class="ring-option ring-red locked" data-ring="ring-red"></div>
+        <div class="ring-option ring-nitro locked" data-ring="ring-nitro"></div>
+
+        <p class="text-muted mt-3">
+          🔒 Algunos aros se desbloquean con logros
+        </p>
+
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<footer class="bg-dark text-white py-4 mt-auto">
+    <div class="container text-center">
+        <p>© 2026 Mundial Chat</p>
+    </div>
+</footer>
+
+
+<!-- Scripts -->
+<script src="../js/flags.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="../js/profile.js"></script>
+
+</body>
+</html>
