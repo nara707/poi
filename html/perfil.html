@@ -22,19 +22,21 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm">
     <div class="container-fluid">
         <a class="navbar-brand fw-bold" href="index.html">
-            Mundial 2026
+            MUNDIAL 2026
         </a>
 
         <div class="collapse navbar-collapse">
             <ul class="navbar-nav ms-auto">
                 <li class="nav-item">
-                    <a class="nav-link" href="chat.html">Chats</a>
+                    <a class="nav-link" href="chat.html">CHATS</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="videollamada.html">Videollamada</a>
+                    <a class="nav-link" href="#" onclick="openShop(); return false;">
+                        TIENDA
+                    </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link active" href="perfil.html">Mi Perfil</a>
+                    <a class="nav-link active" href="perfil.html">MI PERFIL</a>
                 </li>
             </ul>
         </div>
@@ -147,9 +149,21 @@
                     </div>
 
                 </div>
+
+
+                
             </div>
 
-       
+            <div class="card shadow-sm border-0 mt-3">
+            <div class="card-body text-center py-3">
+
+                <h6 class="mb-1">⭐ Puntos Acumulados ⭐</h6>
+                <h3 class="fw-bold mb-0" id="pointsCount">0</h3>
+
+            </div>
+            </div>
+
+            
         </div>
         <div class="col-lg-3">
 
@@ -296,6 +310,52 @@
       </div>
 
     </div>
+  </div>
+</div>
+
+<!-- OVERLAY TIENDA -->
+<div id="shopOverlay" class="shop-overlay">
+
+  <div class="shop-container">
+
+    <div class="shop-header">
+      <h4> Tienda de Stickers </h4>
+      <div class="shop-points">
+        <h4> Puntos:  <span id="shopPoints">0</span></h4>
+      </div>
+      <button class="btn-close" onclick="closeShop()"></button>
+    </div>
+
+    <div class="shop-grid">
+
+      <div class="shop-item" data-price="50">
+        <img src="https://i.pinimg.com/736x/dd/fe/af/ddfeafaa350fa4615288ef19e34dc8ab.jpg">
+        <p>Sticker Balon</p>
+        <span>50 pts</span>
+        <button class="btn btn-danger btn-sm buy-btn">Comprar</button>
+      </div>
+
+      <div class="shop-item" data-price="100">
+        <img src="https://i.pinimg.com/736x/6f/59/6a/6f596a741c1affd8c67da13381f04905.jpg">
+        <p>Sticker Tamagochi</p>
+        <span>100 pts</span>
+        <button class="btn btn-danger btn-sm buy-btn">Comprar</button>
+      </div>
+
+      <div class="shop-item" data-price="150">
+        <img src="https://i.pinimg.com/736x/a7/af/92/a7af926201ac051e7a2bafd9a4696a76.jpg">
+        <p>Sticker Gato</p>
+        <span>150 pts</span>
+        <button class="btn btn-danger btn-sm buy-btn">Comprar</button>
+      </div>
+    <div class="shop-item" data-price="150">
+            <img src="https://i.pinimg.com/736x/09/b6/7c/09b67c9d2e974552da9c39d2c8dc07f6.jpg">
+            <p>Sticker Trofeo</p>
+            <span>180 pts</span>
+            <button class="btn btn-danger btn-sm buy-btn">Comprar</button>
+        </div>
+        </div>
+
   </div>
 </div>
 
