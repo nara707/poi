@@ -61,12 +61,15 @@ if (savedRing) {
 // ===============================
 // SISTEMA COMPLETO DE TAREAS
 // ===============================
-
 const taskList = document.getElementById("taskList");
 const newTaskInput = document.getElementById("newTaskInput");
 const addTaskBtn = document.getElementById("addTaskBtn");
+const pointsDisplay = document.getElementById("pointsCount");
 
 let tasks = JSON.parse(localStorage.getItem("tasks")) || [];
+let points = parseInt(localStorage.getItem("userPoints")) || 0;
+
+pointsDisplay.textContent = points;
 
 // Renderizar tareas
 function renderTasks() {
@@ -79,7 +82,7 @@ function renderTasks() {
 
     li.innerHTML = `
       <div>
-        <input type="checkbox" class="form-check-input me-2" 
+        <input type="checkbox" class="form-check-input me-2"
                ${task.completed ? "checked" : ""}
                onchange="toggleTask(${index})">
         <span style="${task.completed ? 'text-decoration: line-through; opacity: 0.6;' : ''}">
@@ -101,7 +104,6 @@ function renderTasks() {
 // Agregar tarea
 addTaskBtn.addEventListener("click", () => {
   const text = newTaskInput.value.trim();
-
   if (text === "") return;
 
   tasks.push({
@@ -113,22 +115,79 @@ addTaskBtn.addEventListener("click", () => {
   renderTasks();
 });
 
-// Permitir Enter
+// Enter agrega tarea
 newTaskInput.addEventListener("keypress", (e) => {
   if (e.key === "Enter") addTaskBtn.click();
 });
 
-// Marcar completada
+// Marcar completada y sumar puntos
 function toggleTask(index) {
+
+  if (!tasks[index].completed) {
+    points += 1; // ← cada tarea vale 10 puntos
+  } else {
+     
+  }
+
   tasks[index].completed = !tasks[index].completed;
+
+  localStorage.setItem("userPoints", points);
+  pointsDisplay.textContent = points;
+
   renderTasks();
 }
 
 // Eliminar tarea
 function deleteTask(index) {
+
+  if (tasks[index].completed) {
+    points -= 10; // quitar puntos si estaba completada
+    localStorage.setItem("userPoints", points);
+    pointsDisplay.textContent = points;
+  }
+
   tasks.splice(index, 1);
   renderTasks();
 }
 
 // Inicializar
 renderTasks();
+
+// ===========================
+// TIENDA
+// ===========================
+
+const shopOverlay = document.getElementById("shopOverlay");
+const shopPoints = document.getElementById("shopPoints");
+
+function openShop() {
+  shopOverlay.style.display = "flex";
+  shopPoints.textContent = points;
+}
+
+function closeShop() {
+  shopOverlay.style.display = "none";
+}
+
+// Comprar
+document.querySelectorAll(".buy-btn").forEach(btn => {
+
+  btn.addEventListener("click", function() {
+
+    const item = this.closest(".shop-item");
+    const price = parseInt(item.dataset.price);
+
+    if (points >= price) {
+      points -= price;
+      localStorage.setItem("userPoints", points);
+      document.getElementById("pointsCount").textContent = points;
+      shopPoints.textContent = points;
+
+      alert("Compra exitosa 🎉");
+    } else {
+      alert("No tienes suficientes puntos 😢");
+    }
+
+  });
+
+});
