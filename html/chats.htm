@@ -1,1 +1,517 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Estadísticas Mundial 2026</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="../css/chats.css">
 
+</head>
+<body>
+<div class="app-wrapper">
+
+  <!-- ── LEFT SIDEBAR ── -->
+  <div class="sidebar">
+
+    <!-- PANEL 1: Chat List -->
+    <div class="panel" id="chatListPanel">
+      <div class="sidebar-top">
+        <div class="settings-tray" style="border-radius:7px;">
+          <img class="profile-image" src="https://i.pinimg.com/1200x/9e/75/23/9e75237755b7261a24668d240b5d1cdf.jpg" alt="Profile">
+		  
+          <span class="settings-tray--right">
+            <i class="material-icons">cached</i>
+            <i class="material-icons" id="newChatBtn" title="New chat" style="cursor:pointer;">message</i>
+            <i class="material-icons">menu</i>
+          </span>
+        </div>
+        <div class="search-box">
+          <div class="input-wrapper">
+            <i class="material-icons">search</i>
+            <input placeholder="Search here" type="text">
+          </div>
+        </div>
+      </div>
+
+      <div class="sidebar-list">
+        <div class="section-heading">Groups</div>
+        <div class="friend-drawer friend-drawer--onhover"
+			data-name="Mundial 2026 Squad"
+			data-info="Nayeli, Sunoo, Carlos Xaviers, Yves"
+			data-type="group"
+	        data-img="https://cdn-icons-png.flaticon.com/512/1946/1946429.png">
+		<div class="group-avatar">
+			<i class="material-icons" style="font-size:22px;">groups</i>
+		</div>
+
+		<div class="text">
+			<h6>Mundial 2026 Squad <span class="group-label">GROUP</span></h6>
+			<p>Nayeli: Who's watching tonight? 🔥</p>
+		</div>
+
+		<span class="time">14:05</span>
+		</div>
+
+        <hr>
+		<div class="friend-drawer friend-drawer--onhover"
+			data-name="Chaesita"
+			data-info="Online"
+			data-type="private"
+			data-img="https://i.pinimg.com/1200x/36/cb/9c/36cb9c162b90a3de2636a2e11684143d.jpg">
+
+			<img class="profile-image"
+				src="https://i.pinimg.com/1200x/36/cb/9c/36cb9c162b90a3de2636a2e11684143d.jpg"
+				alt="">
+
+			<div class="text">
+				<h6>Chaesita</h6>
+				<p>Hey, you're arrested!</p>
+			</div>
+
+			<span class="time">13:21</span>
+		</div>
+        <hr>
+       <div class="friend-drawer friend-drawer--onhover"
+			data-name="Sunoo"
+			data-info="Last seen 2 minutes ago"
+			data-type="private"
+			data-img="https://i.pinimg.com/1200x/c8/21/5b/c8215b80d924513dced9a362bf9709b1.jpg">
+
+			<img class="profile-image"
+				src="https://i.pinimg.com/1200x/c8/21/5b/c8215b80d924513dced9a362bf9709b1.jpg"
+				alt="">
+
+			<div class="text">
+				<h6>Sunoo</h6>
+				<p>Wanna grab a beer?</p>
+			</div>
+
+			<span class="time">00:32</span>
+		</div>
+        <hr>
+		<div class="friend-drawer friend-drawer--onhover"
+			data-name="Gisselle"
+			data-info="Last seen 5 minutes ago"
+			data-type="private"
+			data-img="https://i.pinimg.com/736x/a5/16/5c/a5165cd2348144b790b5ee9e89549884.jpg">
+
+			<img class="profile-image"
+				src="https://i.pinimg.com/736x/a5/16/5c/a5165cd2348144b790b5ee9e89549884.jpg"
+				alt="">
+
+			<div class="text">
+				<h6>Gisselle</h6>
+				<p>Seen that canned piece of s?</p>
+			</div>
+
+			<span class="time">13:21</span>
+		</div>
+        <hr>
+       <div class="friend-drawer friend-drawer--onhover"
+			data-name="Nayeli"
+			data-info="Online"
+			data-type="private"
+			data-img="https://i.pinimg.com/736x/86/4b/fe/864bfe81441a9b39e9e99b2ba4cefe50.jpg">
+
+			<img class="profile-image"
+				src="https://i.pinimg.com/736x/86/4b/fe/864bfe81441a9b39e9e99b2ba4cefe50.jpg"
+				alt="">
+
+			<div class="text">
+				<h6>Nayeli</h6>
+				<p>Im studying spanish...</p>
+			</div>
+
+			<span class="time">13:21</span>
+		</div>
+        <hr>
+		<div class="friend-drawer friend-drawer--onhover"
+			data-name="Carlos Xaviers"
+			data-info="Last seen today at 3:40 PM"
+			data-type="private"
+			data-img="https://i.pinimg.com/736x/a7/5d/c7/a75dc7cd0e258a1f557ae0e2f9b0b616.jpg">
+
+			<img class="profile-image"
+				src="https://i.pinimg.com/736x/a7/5d/c7/a75dc7cd0e258a1f557ae0e2f9b0b616.jpg"
+				alt="">
+
+			<div class="text">
+				<h6>Carlos Xaviers</h6>
+				<p>I'm not sure...</p>
+			</div>
+
+			<span class="time">13:21</span>
+		</div>
+        <hr>
+        <div class="friend-drawer friend-drawer--onhover"
+			data-name="Yves"
+			data-info="Online"
+			data-type="private"
+			data-img="https://i.pinimg.com/736x/a8/67/a9/a867a94d036592166f719d651b55521f.jpg">
+
+			<img class="profile-image"
+				src="https://i.pinimg.com/736x/a8/67/a9/a867a94d036592166f719d651b55521f.jpg"
+				alt="">
+
+			<div class="text">
+				<h6>Yves</h6>
+				<p>Hi, wanna see something?</p>
+			</div>
+
+			<span class="time">13:21</span>
+		</div>
+      </div>
+    </div>
+
+    <!-- PANEL 2: New Chat -->
+    <div class="new-chat-panel" id="newChatPanel">
+      <div class="new-chat-header">
+        <span class="back-btn" id="backBtn">
+          <i class="material-icons">arrow_back</i>
+        </span>
+        <h6>New chat</h6>
+      </div>
+
+      <div class="new-chat-search">
+        <div class="input-wrapper">
+          <i class="material-icons">search</i>
+          <input placeholder="Search name or number" type="text">
+        </div>
+      </div>
+
+      <div class="new-chat-list">
+        <!-- Actions -->
+        <div class="new-chat-action">
+          <div class="action-icon"><i class="material-icons">group_add</i></div>
+          <span>New group</span>
+        </div>
+        <div class="new-chat-action">
+          <div class="action-icon"><i class="material-icons">person_add</i></div>
+          <span>New contact</span>
+        </div>
+        <div class="new-chat-action">
+          <div class="action-icon"><i class="material-icons">groups</i></div>
+          <span>New community</span>
+        </div>
+
+        <!-- Contacts -->
+        <div class="contacts-heading">Contacts</div>
+			
+        <div class="nc-contact">
+          <img class="profile-image" src="https://i.pinimg.com/1200x/c8/21/5b/c8215b80d924513dced9a362bf9709b1.jpg" alt="">
+          <div class="text"><h6>Sunoo</h6><p>Wanna grab a beer?</p></div>
+        </div>
+        <div class="nc-contact">
+          <img class="profile-image" src="https://i.pinimg.com/736x/a5/16/5c/a5165cd2348144b790b5ee9e89549884.jpg" alt="">
+          <div class="text"><h6>Gisselle</h6><p>Seen that canned piece of s?</p></div>
+        </div>
+        <div class="nc-contact">
+          <img class="profile-image" src="https://i.pinimg.com/736x/86/4b/fe/864bfe81441a9b39e9e99b2ba4cefe50.jpg" alt="">
+          <div class="text"><h6>Nayeli</h6><p>Im studying spanish...</p></div>
+        </div>
+        <div class="nc-contact">
+          <img class="profile-image" src="https://i.pinimg.com/736x/a7/5d/c7/a75dc7cd0e258a1f557ae0e2f9b0b616.jpg" alt="">
+          <div class="text"><h6>Carlos Xaviers</h6><p>I'm not sure...</p></div>
+        </div>
+        <div class="nc-contact">
+          <img class="profile-image" src="https://i.pinimg.com/736x/a8/67/a9/a867a94d036592166f719d651b55521f.jpg" alt="">
+          <div class="text"><h6>Yves</h6><p>Hi, wanna see something?</p></div>
+        </div>
+      </div>
+    </div>
+
+  </div><!-- /sidebar -->
+
+  <!-- ── RIGHT CHAT AREA ── -->
+  <div class="chat-area">
+    <div class="settings-tray">
+      <div class="friend-drawer friend-drawer--grey" style="border-radius:7px; padding:6px 10px;">
+      <img id="chatProfileImage" class="profile-image"
+        src="https://i.pinimg.com/1200x/36/cb/9c/36cb9c162b90a3de2636a2e11684143d.jpg"
+        alt="">
+		<div class="text">
+			<h6 id="chatName">Chaesita</h6>
+			<p id="chatInfo">Layin' down the law since like before Christ...</p>
+		</div>
+        <span class="settings-tray--right">
+          <i class="material-icons" id="callBtn" title="Voice call" style="cursor:pointer;">call</i>
+          <i class="material-icons" id="videoBtn" title="Video call" style="cursor:pointer;">videocam</i>
+        </span>
+      </div>
+    </div>
+
+    <div class="messages-scroll">
+      <div class="bubble-left"><div class="chat-bubble chat-bubble--left">Hello dude!</div></div>
+      <div class="bubble-right"><div class="chat-bubble chat-bubble--right">Hello dude!</div></div>
+      <div class="bubble-right"><div class="chat-bubble chat-bubble--right">Hello dude!</div></div>
+      <div class="bubble-left"><div class="chat-bubble chat-bubble--left">Hello dude!</div></div>
+      <div class="bubble-left"><div class="chat-bubble chat-bubble--left">Hello dude!</div></div>
+      <div class="bubble-left"><div class="chat-bubble chat-bubble--left">Hello dude!</div></div>
+      <div class="bubble-right"><div class="chat-bubble chat-bubble--right">Hello dude!</div></div>
+    </div>
+
+    <div class="chat-box-tray">
+      <i class="material-icons">sentiment_very_satisfied</i>
+      <input type="text" placeholder="Type your message here...">
+      <i class="material-icons">mic</i>
+      <i class="material-icons">send</i>
+    </div>
+  </div>
+
+</div>
+
+
+<!-- ── VOICE CALL MODAL ── -->
+<div id="callModal" style="display:none; position:fixed; inset:0; z-index:9999; background:linear-gradient(160deg,#1a1a2e 0%,#16213e 60%,#0f3460 100%); flex-direction:column; align-items:center; justify-content:space-between; padding:60px 20px 50px; color:#fff; font-family:sans-serif;">
+  <div style="text-align:center; animation: fadeInUp 0.5s ease;">
+    <img src="https://i.pinimg.com/1200x/36/cb/9c/36cb9c162b90a3de2636a2e11684143d.jpg" style="width:110px;height:110px;border-radius:50%;object-fit:cover;border:4px solid rgba(255,255,255,0.3);box-shadow:0 0 40px rgba(199,43,43,0.4);">
+    <h2 style="margin:20px 0 6px; font-size:26px; font-weight:700; letter-spacing:0.5px;">Chaesita</h2>
+    <p id="callStatus" style="margin:0; color:rgba(255,255,255,0.6); font-size:14px; letter-spacing:1px;">Calling...</p>
+    <p id="callTimer" style="margin:8px 0 0; font-size:22px; font-weight:300; letter-spacing:2px; display:none;">00:00</p>
+  </div>
+
+  <!-- Ripple animation -->
+  <div style="position:absolute; top:50%; left:50%; transform:translate(-50%,-60%); pointer-events:none;">
+    <div class="ripple"></div>
+    <div class="ripple" style="animation-delay:0.8s;"></div>
+    <div class="ripple" style="animation-delay:1.6s;"></div>
+  </div>
+
+  <!-- Controls -->
+  <div style="display:flex; gap:36px; align-items:center; position:relative; z-index:1;">
+    <div style="text-align:center; cursor:pointer;" onclick="toggleMute(this)">
+      <div style="width:60px;height:60px;border-radius:50%;background:rgba(255,255,255,0.15);display:flex;align-items:center;justify-content:center; transition:0.2s;" onmouseover="this.style.background='rgba(255,255,255,0.25)'" onmouseout="this.style.background='rgba(255,255,255,0.15)'">
+        <i class="material-icons" style="font-size:28px;" id="muteIcon">mic</i>
+      </div>
+      <span style="font-size:11px; color:rgba(255,255,255,0.6); margin-top:8px; display:block;">Mute</span>
+    </div>
+    <div style="text-align:center; cursor:pointer;" onclick="closeCall()">
+      <div style="width:74px;height:74px;border-radius:50%;background:#e74c3c;display:flex;align-items:center;justify-content:center;box-shadow:0 6px 24px rgba(231,76,60,0.5); transition:0.2s;" onmouseover="this.style.transform='scale(1.08)'" onmouseout="this.style.transform='scale(1)'">
+        <i class="material-icons" style="font-size:32px;">call_end</i>
+      </div>
+      <span style="font-size:11px; color:rgba(255,255,255,0.6); margin-top:8px; display:block;">End</span>
+    </div>
+    <div style="text-align:center; cursor:pointer;" onclick="toggleSpeaker(this)">
+      <div style="width:60px;height:60px;border-radius:50%;background:rgba(255,255,255,0.15);display:flex;align-items:center;justify-content:center; transition:0.2s;" onmouseover="this.style.background='rgba(255,255,255,0.25)'" onmouseout="this.style.background='rgba(255,255,255,0.15)'">
+        <i class="material-icons" style="font-size:28px;" id="speakerIcon">volume_up</i>
+      </div>
+      <span style="font-size:11px; color:rgba(255,255,255,0.6); margin-top:8px; display:block;">Speaker</span>
+    </div>
+  </div>
+</div>
+
+<!-- ── VIDEO CALL MODAL ── -->
+<div id="videoModal" style="display:none; position:fixed; inset:0; z-index:9999; background:#111; flex-direction:column; font-family:sans-serif; overflow:hidden;">
+  <!-- Main video (other person - simulated) -->
+  <div style="flex:1; background:linear-gradient(135deg,#1a1a2e,#16213e,#0f3460); display:flex; align-items:center; justify-content:center; position:relative;">
+    <img src="https://i.pinimg.com/1200x/36/cb/9c/36cb9c162b90a3de2636a2e11684143d.jpg" style="width:160px;height:160px;border-radius:50%;object-fit:cover;opacity:0.85;border:3px solid rgba(255,255,255,0.2);animation:videoPulse 3s ease-in-out infinite;">
+    <!-- Name + status overlay -->
+    <div style="position:absolute; top:20px; left:0; right:0; text-align:center; color:#fff;">
+      <p id="videoStatus" style="margin:0; font-size:13px; color:rgba(255,255,255,0.6); letter-spacing:1px;">Connecting...</p>
+    </div>
+    <p id="videoTimer" style="position:absolute; top:20px; right:20px; margin:0; color:#fff; font-size:18px; font-weight:300; letter-spacing:2px; display:none;"></p>
+    <!-- Self view (picture-in-picture) -->
+    <div style="position:absolute; bottom:100px; right:16px; width:90px; height:130px; border-radius:14px; overflow:hidden; border:2px solid rgba(255,255,255,0.4); box-shadow:0 4px 20px rgba(0,0,0,0.5); background:#222;">
+      <img src="https://i.pinimg.com/1200x/9e/75/23/9e75237755b7261a24668d240b5d1cdf.jpg" style="width:100%;height:100%;object-fit:cover;opacity:0.9;">
+    </div>
+    <!-- Name bottom -->
+    <div style="position:absolute; bottom:80px; left:16px; color:#fff;">
+      <h3 style="margin:0; font-size:20px; font-weight:600;">Chaesita</h3>
+    </div>
+  </div>
+  <!-- Controls bar -->
+  <div style="background:rgba(0,0,0,0.85); padding:18px 0 24px; display:flex; justify-content:center; gap:28px; align-items:center; backdrop-filter:blur(10px);">
+    <div style="text-align:center; cursor:pointer;" onclick="toggleVideoMute(this)">
+      <div style="width:56px;height:56px;border-radius:50%;background:rgba(255,255,255,0.15);display:flex;align-items:center;justify-content:center; transition:0.2s;" onmouseover="this.style.background='rgba(255,255,255,0.25)'" onmouseout="this.style.background='rgba(255,255,255,0.15)'">
+        <i class="material-icons" style="font-size:26px;color:#fff;" id="videoMicIcon">mic</i>
+      </div>
+      <span style="font-size:10px;color:rgba(255,255,255,0.55);margin-top:6px;display:block;">Mute</span>
+    </div>
+    <div style="text-align:center; cursor:pointer;" onclick="closeVideo()">
+      <div style="width:68px;height:68px;border-radius:50%;background:#e74c3c;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 20px rgba(231,76,60,0.5); transition:0.2s;" onmouseover="this.style.transform='scale(1.08)'" onmouseout="this.style.transform='scale(1)'">
+        <i class="material-icons" style="font-size:30px;color:#fff;">call_end</i>
+      </div>
+      <span style="font-size:10px;color:rgba(255,255,255,0.55);margin-top:6px;display:block;">End</span>
+    </div>
+    <div style="text-align:center; cursor:pointer;" onclick="toggleCamera(this)">
+      <div style="width:56px;height:56px;border-radius:50%;background:rgba(255,255,255,0.15);display:flex;align-items:center;justify-content:center; transition:0.2s;" onmouseover="this.style.background='rgba(255,255,255,0.25)'" onmouseout="this.style.background='rgba(255,255,255,0.15)'">
+        <i class="material-icons" style="font-size:26px;color:#fff;" id="cameraIcon">videocam</i>
+      </div>
+      <span style="font-size:10px;color:rgba(255,255,255,0.55);margin-top:6px;display:block;">Camera</span>
+    </div>
+  </div>
+</div>
+
+
+<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+<script>
+  // ── Sidebar panel logic ──
+  const chatListPanel = document.getElementById('chatListPanel');
+  const newChatPanel  = document.getElementById('newChatPanel');
+  const newChatBtn    = document.getElementById('newChatBtn');
+  const backBtn       = document.getElementById('backBtn');
+
+  newChatBtn.addEventListener('click', () => {
+    chatListPanel.classList.add('hidden');
+    newChatPanel.classList.add('visible');
+    newChatBtn.classList.add('icon-active');
+  });
+
+  backBtn.addEventListener('click', () => {
+    newChatPanel.classList.remove('visible');
+    chatListPanel.classList.remove('hidden');
+    newChatBtn.classList.remove('icon-active');
+  });
+
+  document.querySelectorAll('.nc-contact').forEach(el => {
+    el.addEventListener('click', () => {
+      newChatPanel.classList.remove('visible');
+      chatListPanel.classList.remove('hidden');
+      newChatBtn.classList.remove('icon-active');
+    });
+  });
+
+  document.querySelectorAll('.friend-drawer--onhover').forEach(chat => {
+  chat.addEventListener('click', () => {
+
+    const name = chat.getAttribute('data-name');
+    const info = chat.getAttribute('data-info');
+    const type = chat.getAttribute('data-type');
+    const img  = chat.getAttribute('data-img');
+
+    if (!name || !img) return;
+
+    // Cambiar nombre
+    document.getElementById('chatName').textContent = name;
+
+    // Cambiar info
+    if (type === "group") {
+      document.getElementById('chatInfo').textContent =
+        "Integrantes: " + info;
+    } else {
+      document.getElementById('chatInfo').textContent = info;
+    }
+
+    // Cambiar imagen
+    document.getElementById('chatProfileImage').src = img;
+
+    // Animación de burbujas (sin jQuery)
+    document.querySelectorAll('.chat-bubble').forEach(bubble => {
+      bubble.style.display = 'none';
+      setTimeout(() => {
+        bubble.style.display = '';
+      }, 200);
+    });
+
+  });
+});
+  // ── Call timer logic ──
+  let callInterval = null;
+  let callSeconds  = 0;
+
+  function startTimer(displayId) {
+    callSeconds = 0;
+    callInterval = setInterval(() => {
+      callSeconds++;
+      const m = String(Math.floor(callSeconds/60)).padStart(2,'0');
+      const s = String(callSeconds%60).padStart(2,'0');
+      const el = document.getElementById(displayId);
+      if (el) el.textContent = m+':'+s;
+    }, 1000);
+  }
+
+  function stopTimer() {
+    clearInterval(callInterval);
+    callInterval = null;
+    callSeconds  = 0;
+  }
+
+  // ── Voice Call ──
+  document.getElementById('callBtn').addEventListener('click', () => {
+    const modal = document.getElementById('callModal');
+    modal.style.display = 'flex';
+    document.getElementById('callStatus').textContent = 'Calling...';
+    document.getElementById('callTimer').style.display = 'none';
+    setTimeout(() => {
+      document.getElementById('callStatus').textContent = 'On call';
+      document.getElementById('callTimer').style.display = 'block';
+      startTimer('callTimer');
+    }, 2000);
+  });
+
+  function closeCall() {
+    document.getElementById('callModal').style.display = 'none';
+    stopTimer();
+  }
+
+  function toggleMute(wrapper) {
+    const icon = document.getElementById('muteIcon');
+    const btn  = wrapper.querySelector('div');
+    if (icon.textContent === 'mic') {
+      icon.textContent = 'mic_off';
+      btn.style.background = 'rgba(231,76,60,0.5)';
+    } else {
+      icon.textContent = 'mic';
+      btn.style.background = 'rgba(255,255,255,0.15)';
+    }
+  }
+
+  function toggleSpeaker(wrapper) {
+    const icon = document.getElementById('speakerIcon');
+    const btn  = wrapper.querySelector('div');
+    if (icon.textContent === 'volume_up') {
+      icon.textContent = 'volume_off';
+      btn.style.background = 'rgba(231,76,60,0.5)';
+    } else {
+      icon.textContent = 'volume_up';
+      btn.style.background = 'rgba(255,255,255,0.15)';
+    }
+  }
+
+  // ── Video Call ──
+  document.getElementById('videoBtn').addEventListener('click', () => {
+    const modal = document.getElementById('videoModal');
+    modal.style.display = 'flex';
+    modal.style.flexDirection = 'column';
+    document.getElementById('videoStatus').textContent = 'Connecting...';
+    document.getElementById('videoTimer').style.display = 'none';
+    setTimeout(() => {
+      document.getElementById('videoStatus').textContent = '';
+      document.getElementById('videoTimer').style.display = 'block';
+      startTimer('videoTimer');
+    }, 2000);
+  });
+
+  function closeVideo() {
+    document.getElementById('videoModal').style.display = 'none';
+    stopTimer();
+  }
+
+  function toggleVideoMute(wrapper) {
+    const icon = document.getElementById('videoMicIcon');
+    const btn  = wrapper.querySelector('div');
+    if (icon.textContent === 'mic') {
+      icon.textContent = 'mic_off';
+      btn.style.background = 'rgba(231,76,60,0.5)';
+    } else {
+      icon.textContent = 'mic';
+      btn.style.background = 'rgba(255,255,255,0.15)';
+    }
+  }
+
+  function toggleCamera(wrapper) {
+    const icon = document.getElementById('cameraIcon');
+    const btn  = wrapper.querySelector('div');
+    if (icon.textContent === 'videocam') {
+      icon.textContent = 'videocam_off';
+      btn.style.background = 'rgba(231,76,60,0.5)';
+    } else {
+      icon.textContent = 'videocam';
+      btn.style.background = 'rgba(255,255,255,0.15)';
+    }
+  }
+</script>
+</body>
+</html>
